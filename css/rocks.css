@@ -1,0 +1,163 @@
+html {
+    background-color: #4ce8ff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    text-align: center;
+    background-color: #F9A4ED;
+    color: #8536D6;
+    max-width: 900px;
+    height: 88vh;
+}
+
+.centroimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    max-width: 400px;
+}
+
+.copyright {
+    position: absolute;
+    top: 100vh;
+    transform: translateY(-100%);
+}
+
+.heading {
+    margin: 50px 0;
+    text-align: center;
+    color: var(--color-sub);
+    font-size: 55px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    text-align: center;
+}
+
+.card-image {
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+    max-width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-image:hover {
+    top: -5px;
+}
+
+.card-text {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 25px;
+    color: #8536D6;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 55px;
+    color: #824ab9;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+:root {
+    --border-size: 0.125rem;
+    --duration: 250ms;
+    --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+    
+    --color-primary: rgb(187, 61, 245);
+    --color-secondary: black;
+    --color-tertiary: rgb(173, 40, 133);
+    --shadow: rgba(0, 0, 0, 0.1);
+    --space: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    padding: calc(var(--space) * 2);
+    max-width: 700px;
+}
+
+.multi-button {
+    display: flex;
+    width: 100%;
+}
+
+.multi-button button {
+    flex-grow: 1;
+    cursor: pointer;
+    position: relative;
+    padding: calc(var(--space) / 1.125) var(--space) var(--space);
+    border: var(--border-size) solid black;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    font-size: 1.5rem;
+    text-shadow: var(--shadow) 2px 2px;
+    transition: flex-grow var(--duration) var(--ease);
+}
+
+.multi-button button+button {
+    border-left: var(--border-size) solid black;
+    margin-left: calc(var(--border-size) * -1);
+}
+
+.multi-button button:hover, .multi-button button:focus {
+    flex-grow: 2;
+    color: rgb(211, 61, 191);
+    outline: none;
+    text-shadow: none;
+    background-color: var(--color-secondary);
+}
+
+.multi-button button:focus {
+    outline: var(--border-size) dashed var(--color-primary);
+    outline-offset: calc(var(--border-size) * -3);
+}
+
+.multi-button:hover button:focus:not(:hover) {
+    flex-grow: 1;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    outline-color: var(--color-tertiary);
+}
+
+.multi-button button:active {
+    transform: translateY(var(--border-size));
+}
